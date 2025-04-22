@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgb(12, 10, 10);
+    color: white;
+}
+
+#nav{
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: rgb(49, 40, 40);
+}
+
+h1,h2, h3 {
+    text-align: center;
+    line-height: 50px;
+}
+
+h2, h1{
+    color: bisque;
+}

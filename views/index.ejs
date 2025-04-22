@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyScribe</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="nav">
+        <h1>DailyScribe</h1>
+        <h3>Capture your day, every day</h3>
+    </div>
+    <div id="container">
+        <% for(let scribe of scribes) { %>
+        <div class="box">
+            <h2><%= scribe.title %></h2>
+            <p> <%= scribe.description %></p>
+            <p><%= scribe.date %></p>
+
+            <a href="http://localhost:8080/home/<%= scribe.id %>">See more..</a>
+
+            <br>
+            <button><a href="http://localhost:8080/home/<%= scribe.id %>/edit">Edit</a></button>
+
+            <form action="/home/<%= scribe.id %>?_method=DELETE" method="post">
+                <button>Delete</button>
+            </form>
+
+        </div>
+        <% } %>
+    </div>
+    <button><a href="http://localhost:8080/home/new">Create Scribe</a></button>
+</body>
+</html>
